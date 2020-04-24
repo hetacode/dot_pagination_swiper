@@ -1,6 +1,6 @@
 name: dot_pagination_swiper
 description: A simple swiper with dot pagination for Flutter. Compatible with Android & iOS. 
-version: 0.1.0
+version: 0.1.2
 author: takuchalle.dev <tky.ohashi@gmail.com>
 homepage: https://github.com/takuyaohashi/dot_pagination_swiper
 
