@@ -4,8 +4,11 @@ import 'color_dot.dart';
 
 @immutable
 class DotPagination extends StatelessWidget {
+  final Color inactiveDotColor;
+  final Color activeDotColor;
+
   const DotPagination(
-      {Key key, @required this.itemCount, @required this.activeIndex})
+      {Key key, @required this.itemCount, @required this.activeIndex, this.activeDotColor, this.inactiveDotColor})
       : assert(itemCount != null),
         assert(activeIndex != null),
         assert(activeIndex >= 0),
@@ -17,9 +20,9 @@ class DotPagination extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final inactiveDot = ColorDot();
+    final inactiveDot = ColorDot(color: inactiveDotColor,);
     final activeDot = ColorDot(
-      color: Theme.of(context).primaryColor,
+      color: activeDotColor ?? Theme.of(context).primaryColor,
     );
 
     final list = List<ColorDot>.generate(
